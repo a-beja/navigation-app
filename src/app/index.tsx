@@ -6,9 +6,9 @@ import "./global.css";
 const App = () => {
 
    const [fontsLoaded] = useFonts({
-    "WorkSans-Black": require("../assets/fonts/WorkSans-Black.ttf"),
-    "WorkSans-Light": require("../assets/fonts/WorkSans-Light.ttf"),
-    "WorkSans-Medium": require("../assets/fonts/WorkSans-Medium.ttf"),
+    "WorkSans-Black": require("../../assets/fonts/WorkSans-Black.ttf"),
+    "WorkSans-Light": require("../../assets/fonts/WorkSans-Light.ttf"),
+    "WorkSans-Medium": require("../../assets/fonts/WorkSans-Medium.ttf"),
   });
 
   if (!fontsLoaded) return null;
