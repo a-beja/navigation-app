@@ -7,8 +7,10 @@ const App = () => {
       <Text className="text-blue-500 font-work-medium">
         Welcome to Nativewind!
       </Text>
+
+      <Text className='text-primary font-work-medium'>Hola Mundo</Text>
     </View>
   )
 }
 
-export default App
+export default App;
