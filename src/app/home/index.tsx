@@ -1,13 +1,17 @@
-import { Link } from 'expo-router';
+import CustomButton from '@/components/shared/CustomButton';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView>
       <View className='px-10'>
-        <Link className='mb-5' href='/products'>
+
+
+        <CustomButton color='primary'>Productos</CustomButton>
+
+        {/* <Link className='mb-5' href='/products'>
           Productos{' '}
         </Link>
         <Link className='mb-5' href='/profile'>
@@ -15,7 +19,7 @@ const HomeScreen = () => {
         </Link>
         <Link className='mb-5' href='/settings'>
           Ajustes{' '}
-        </Link>
+        </Link> */}
       </View>
     </SafeAreaView>
   )
