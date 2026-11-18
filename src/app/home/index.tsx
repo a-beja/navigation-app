@@ -12,10 +12,10 @@ const HomeScreen = () => {
           Productos{' '}
         </Link>
         <Link className='mb-5' href='/profile'>
-          Perfil
+          Perfil{' '}
         </Link>
         <Link className='mb-5' href='/settings'>
-          Ajustes
+          Ajustes{' '}
         </Link>
       </View>
     </SafeAreaView>
