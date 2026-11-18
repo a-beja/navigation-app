@@ -5,7 +5,7 @@ interface Props extends PressableProps {
     color: 'primary' | 'secondary' | 'sec-100' | 'sec-200' | 'tertiary';
 }
 
-const CustomButton = ({ children = '', color = 'primary' }: Props) => { 
+const CustomButton = ({ children = '', color = 'primary', onPress, onLongPress }: Props) => { 
 
     const btnColor = {
         primary: 'bg-primary',
@@ -17,10 +17,12 @@ const CustomButton = ({ children = '', color = 'primary' }: Props) => {
 
 
     return (
-        <Pressable
-            className={`p-3 rounded-md ${btnColor}`}
+        <Pressable 
+            className={`p-3 rounded-md ${btnColor} active:opacity-90`}
+            onPress={ onPress }
+            onLongPress={ onLongPress }
         >
-            <Text>
+            <Text className='text-white text-center'>
             { children }
             </Text>
         </Pressable>
