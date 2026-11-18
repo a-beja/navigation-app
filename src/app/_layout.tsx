@@ -1,7 +1,10 @@
 import { useFonts } from "expo-font";
-import { Slot, SplashScreen } from 'expo-router';
+import { Link, Slot, SplashScreen } from 'expo-router';
+import { cssInterop } from "nativewind";
 import { useEffect } from "react";
 import "./global.css";
+
+cssInterop(Link, { className: "style" });
 
 SplashScreen.preventAutoHideAsync();
 
