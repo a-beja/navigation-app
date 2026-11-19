@@ -4,12 +4,14 @@ interface Props extends PressableProps {
     children: string;
     color: 'primary' | 'secondary' | 'sec-100' | 'sec-200' | 'tertiary';
     variant: 'contained' | 'text-only';
+    className?: string;
 }
 
 const CustomButton = ({ 
     children = '', 
     color = 'primary', 
     variant = 'contained',
+    className,
     onPress, 
     onLongPress,
 }: Props) => { 
@@ -34,21 +36,21 @@ const CustomButton = ({
     if( variant === 'text-only' ){
         return (
             <Pressable 
-            className={`p-3`}
-            onPress={ onPress }
-            onLongPress={ onLongPress }
-        >
-            <Text className={`text-center ${textColor} font-work-Medium`}>
-            { children }
-            </Text>
-        </Pressable>
+                className={`p-3 ${ className }`}
+                onPress={ onPress }
+                onLongPress={ onLongPress }
+            >
+                <Text className={`text-center ${textColor} font-work-Medium`}>
+                { children }
+                </Text>
+            </Pressable>
         );
     }
 
 
     return (
         <Pressable 
-            className={`p-3 rounded-md ${btnColor} active:opacity-90`}
+            className={`p-3 rounded-md ${btnColor} active:opacity-90 ${ className }`}
             onPress={ onPress }
             onLongPress={ onLongPress }
         >
